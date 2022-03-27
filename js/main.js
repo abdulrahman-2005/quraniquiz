@@ -4,13 +4,15 @@ function createSession(surahRange) {
 		let quiz = {};
 		let choosenSurah = ALLSURAH[random(surahRange).toString()];
 		let choosenAyah = choosenSurah[random(choosenSurah.length)].split(" ");
+		let choosenAyahCopy = [...choosenAyah]
 		let randomWordChoice = random(choosenAyah.length);
 		let choosenWord = choosenAyah[randomWordChoice];
 		quiz["answer"] = choosenWord;
-		quiz["reveal"] = choosenAyah.join(" ");
 		choosenAyah[randomWordChoice] = ` [${dotsInRange(
 			choosenWord.length
-		)}] `;
+			)}] `;
+		choosenAyahCopy[randomWordChoice] = `[ ${choosenWord} ]`;
+		quiz["reveal"] = choosenAyahCopy.join(" ");
 		quiz["question"] = choosenAyah.join(" ");
 		sess[i.toString()] = quiz;
 	}
@@ -68,7 +70,7 @@ async function wrong() {
 	.quiz-container,
 	#question-number {
 			color: red;
-			border:5px solid red;
+			border:5px solid red !important;
 		}
 	#question {
 		color: red;
@@ -83,7 +85,7 @@ function reset() {
 	.quiz-container,
 	#question-number {
 			color: black;
-			border:5px solid white;
+			border:5px solid white !important;
 		}
 	#question-number {
 		color: gray;

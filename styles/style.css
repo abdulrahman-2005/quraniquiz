@@ -55,7 +55,7 @@ button {
     width: 80%;
     margin: 1vh;
     padding: 2vh;
-    font-size: 5vh;
+    font-size: 1.5rem;
     font-weight: bold;
     transition: .3s;
 }
