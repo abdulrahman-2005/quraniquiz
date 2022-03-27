@@ -95,6 +95,11 @@ button {
     padding: .3rem;
 }
 
+.top-span-p:hover {
+    background-color: black;
+    color: gold;
+}
+
 
 #ans {
     padding-right: 2vw;

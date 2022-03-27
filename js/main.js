@@ -60,7 +60,7 @@ const style = document.getElementById("mainStyle");
 async function right() {
 	style.innerHTML = `
 	.quiz-container,
-	#question-number {
+	.top-span-p {
 			color: green;
 			border:5px solid green !important;
 		}
@@ -75,7 +75,7 @@ async function right() {
 async function wrong() {
 	style.innerHTML = `
 	.quiz-container,
-	#question-number {
+	.top-span-p {
 			color: red;
 			border:5px solid red !important;
 		}
@@ -90,12 +90,13 @@ async function wrong() {
 function reset() {
 	style.innerHTML = `
 	.quiz-container,
-	#question-number {
+	.top-span-p {
 			color: black;
 			border:5px solid white !important;
 		}
-	#question-number {
+	.top-span-p {
 		color: gray;
+		border: none !important;
 	}
 	#question {
 		color: black;
