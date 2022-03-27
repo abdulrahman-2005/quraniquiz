@@ -2,18 +2,21 @@ function createSession(surahRange) {
 	let sess = {};
 	for (let i = 0; i < level * 10; i++) {
 		let quiz = {};
-		let choosenSurah = ALLSURAH[random(surahRange).toString()];
-		let choosenAyah = choosenSurah[random(choosenSurah.length)].split(" ");
-		let choosenAyahCopy = [...choosenAyah]
+		let randomSurahChoice = random(surahRange).toString()
+		let choosenSurah = ALLSURAH[randomSurahChoice];
+		let randomAyahChoice = random(choosenSurah.length);
+		let choosenAyah = choosenSurah[randomAyahChoice].split(" ");
 		let randomWordChoice = random(choosenAyah.length);
+		let choosenAyahCopy = [...choosenAyah];
 		let choosenWord = choosenAyah[randomWordChoice];
 		quiz["answer"] = choosenWord;
 		choosenAyah[randomWordChoice] = ` [${dotsInRange(
 			choosenWord.length
-			)}] `;
-		choosenAyahCopy[randomWordChoice] = `[ ${choosenWord} ]`;
+		)}] `;
+		choosenAyahCopy[randomWordChoice] = `  [ ${choosenWord} ]  `;
 		quiz["reveal"] = choosenAyahCopy.join(" ");
 		quiz["question"] = choosenAyah.join(" ");
+		quiz["data"] = {surah: SUOR[randomSurahChoice], ayah: randomAyahChoice};
 		sess[i.toString()] = quiz;
 	}
 	return sess;
@@ -23,9 +26,13 @@ function loadSession() {
 	document.body.innerHTML = `
 	<div id="container" class="flexy-center">
 			<div id="conty" class="quiz-container flexy-center wrap">
-				<div id="question-number"></div>
+			<span id="top-span" class="flexy-center">
+			<p id="question-number" class="flexy-center top-span-p"></p>
+			<p id="surahname" class="flexy-center top-span-p"></p>
+			<p id="ayahnumber" class="flexy-center top-span-p"></p>
+			</span>
 				<textarea  id="question" class="flexy-center" readonly></textarea>
-				<span id="userarea">
+				<span id="userarea" class="flexy-center">
 					<input type="text" id="answer" class="answer">
 					<button class="answer" id="submit">استمر</button>
 				</span>
@@ -39,11 +46,11 @@ function loadHome() {
 	<div id="container" class = "flexy-center">
         <div class="choose flexy-center dir-col" id="sessionArea">
             <h1 class="title flexy-center">اختر المستوى</h1>
-            <button class="choice flexy-center" onclick="chooseLevel(5)">دارس</button>
-            <button class="choice flexy-center" onclick="chooseLevel(4)">متقدم</button>
-            <button class="choice flexy-center" onclick="chooseLevel(3)">متعلم</button>
-            <button class="choice flexy-center" onclick="chooseLevel(2)">حافظ</button>
-            <button class="choice flexy-center" onclick="chooseLevel(1)">طفل</button>
+            <button class="choice flexy-center" onclick="chooseLevel(5)">المستوى الاعلى</button>
+            <button class="choice flexy-center" onclick="chooseLevel(4)">المستوى الرابع</button>
+            <button class="choice flexy-center" onclick="chooseLevel(3)">المستوى الثالث</button>
+            <button class="choice flexy-center" onclick="chooseLevel(2)">المستوى الثاني</button>
+            <button class="choice flexy-center" onclick="chooseLevel(1)">المستوى الاول</button>
         </div>
     </div>
     <div id="NAVNAVGO"></div>`;
@@ -55,10 +62,10 @@ async function right() {
 	.quiz-container,
 	#question-number {
 			color: green;
-			border:5px solid green;
+			border:5px solid green !important;
 		}
 		#question {
-			color: green;
+			color: green !important;
 		}
 	`;
 	await sleep(2);
@@ -108,6 +115,10 @@ function parseInput(text) {
 	return output;
 }
 
+function createTopperSpan(id, data) {
+	return `<p id="${id}" class="top-span-p flexy-center">${data}</p>`;
+}
+
 class Session {
 	constructor(sessionData) {
 		this.questionNumber = document.getElementById("question-number");
@@ -118,10 +129,12 @@ class Session {
 		this.quizNumber = 0;
 		this.quizzesLength = Object.keys(sessionData).length;
 		this.userarea = document.getElementById("userarea");
+		this.ayahnumber = document.getElementById("ayahnumber");
 		this.data = {
 			right: 0,
 			wrong: 0,
 		};
+		this.surahname = document.getElementById("surahname");
 		this.submit.addEventListener("click", async () => {
 			if (
 				parseInput(this.answerInput.value) ===
@@ -146,7 +159,7 @@ class Session {
 			if (e.code === "Enter") {
 				this.submit.click();
 			}
-		})
+		});
 	}
 	nextQuestion() {
 		this.quizNumber++;
@@ -158,9 +171,10 @@ class Session {
 	}
 	start() {
 		this.answerInput.focus();
-		this.questionNumber.innerHTML = `السؤال رقم ${this.quizNumber + 1}`;
-		this.questionArea.innerHTML =
-			this.sessionData[this.quizNumber.toString()].question;
+		this.questionNumber.innerHTML = `السؤال (${this.quizNumber + 1})`;
+		this.questionArea.innerHTML =this.sessionData[this.quizNumber.toString()].question;
+		this.surahname.innerHTML = `سورة ${this.sessionData[this.quizNumber.toString()].data.surah}`
+		this.ayahnumber.innerHTML =`الاية (${this.sessionData[this.quizNumber.toString()].data.ayah})`;
 	}
 	finish() {
 		this.questionNumber.innerHTML = "النتائج";
@@ -168,7 +182,7 @@ class Session {
 الاجابات الصحيحة: ${this.data.right}
 الاجابات الخاطئة: ${this.data.wrong}
 		`;
-		this.userarea.innerHTML = `<button class="finish" onclick="loadHome()"> انهاء </button>`;
+		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadHome()"> انهاء </button>`;
 	}
 }
 

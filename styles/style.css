@@ -87,22 +87,15 @@ button {
     resize: none;
 }
 
-#question-number {
+.top-span-p {
     background-color: #fff;
     font-weight: bold;
     color: gray;
-    padding: 1vw;
+    height: fit-content !important;
+    padding: .3rem;
 }
 
-.answer {
-    background-color: #fff;
-    direction: rtl;
-    border: none;
-    height: 20%;
-    width: 30%;
-    font-size: 2rem;
-    font-weight: bold;
-}
+
 #ans {
     padding-right: 2vw;
 }
@@ -113,6 +106,18 @@ button {
     width: 80vw;
     background-color: gold;
     border: 5px solid white;
+}
+
+.quiz-container span {
+    height: 20%;
+    width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.quiz-container span * {
+    height: 90%;
+    margin-left: 1vw;
 }
 
 #question {
@@ -126,32 +131,26 @@ button {
     font-weight: bold;
     resize: none;
 }
-
-#question-number {
-    background-color: #fff;
-    font-weight: bold;
-    color: gray;
-    padding: 1vw;
-}
-
 .answer {
     background-color: #fff;
     direction: rtl;
     border: none;
-    height: 20%;
+    outline: none;
     width: 30%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 #answer {
     padding-right: 2vw;
 }
 
+#submit:hover {
+    text-decoration: underline;
+}
 
 
 .finish {
-    height: 20%;
-    width: 100%;
+    width: 80%;
     font-size: 2rem;
     padding-right: 2vw;
     padding-left: 2vw;
