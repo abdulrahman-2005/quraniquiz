@@ -155,6 +155,7 @@ class Session {
 		}
 	}
 	start() {
+		this.answerInput.focus();
 		this.questionNumber.innerHTML = `السؤال رقم ${this.quizNumber + 1}`;
 		this.questionArea.innerHTML =
 			this.sessionData[this.quizNumber.toString()].question;
