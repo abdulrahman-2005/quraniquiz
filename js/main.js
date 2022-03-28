@@ -70,7 +70,7 @@ class normalSession {
 	finish() {
 		this.topspan.innerHTML = createTopperSpan("finisher", "النتائج");
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
-		this.questionArea.innerHTML = `{ ${percent} }
+		this.questionArea.innerHTML = `{ ${percent}% }
 ${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`
 		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
 	}
@@ -146,7 +146,7 @@ class diverseSession {
 		this.topspan.innerHTML = createTopperSpan("finsisher", "النتائج");
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
 		this.descriptionArea.innerHTML = "||||| النتيجة |||||"
-		this.questionArea.innerHTML = `{ ${percent} }
+		this.questionArea.innerHTML = `{ ${percent}% }
 ${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`
 		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
 	}

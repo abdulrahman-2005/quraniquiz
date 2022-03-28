@@ -43,5 +43,5 @@ function createTopperSpan(id, data="") {
 }
 
 function percentOfTwo(all, wins) {
-	return Math.round((wins / all) * 100) + "%";
+	return Math.round((wins / all) * 100)
 }
