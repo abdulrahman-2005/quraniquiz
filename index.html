@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quran Quiz</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="data/appdata.js"></script>
-    <script src="data/qurandata.js"></script>
-    <style id="mainStyle">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quran Quiz</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<script src="data/appdata.js"></script>
+		<script src="data/qurandata.js"></script>
+		<style id="mainStyle"></style>
+		<script>const style = document.getElementById("mainStyle");</script>
+	</head>
 
-    </style>
-</head>
-<body>
-    <div id="container" class = "flexy-center">
-        <div class="choose flexy-center dir-col" id="sessionArea">
-            <h1 class="title flexy-center">اختر المستوى</h1>
-            <button class="choice flexy-center" onclick="chooseLevel(5)">المستوى الاعلى</button>
-            <button class="choice flexy-center" onclick="chooseLevel(4)">المستوى الرابع</button>
-            <button class="choice flexy-center" onclick="chooseLevel(3)">المستوى الثالث</button>
-            <button class="choice flexy-center" onclick="chooseLevel(2)">المستوى الثاني</button>
-            <button class="choice flexy-center" onclick="chooseLevel(1)">المستوى الاول</button>
-        </div>
-    </div>
-    <div id="NAVNAVGO"></div>
-    <script src="./js/utils.js"></script>
-    <script src="./js/main.js"></script>
-</body>
+	<body>
+		<div id="container" class="flexy-center">
+			<div class="choose flexy-center dir-col" id="sessionArea">
+				<h1 class="title flexy-center">اختر النوع</h1>
+				<button class="choice flexy-center" onclick="chooseType(1)">
+					اسئلة اكمال
+				</button>
+				<button class="choice flexy-center" onclick="chooseType(2)">
+					اسئلة متنوعة
+				</button>
+			</div>
+		</div>
+		<div id="NAVNAVGO"></div>
+		<script src="./js/utils.js"></script>
+		<script src="./js/generators.js"></script>
+		<script src="./js/loaders.js"></script>
+		<script src="./js/stylers.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
 </html>

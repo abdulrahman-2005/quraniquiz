@@ -1,6 +1,9 @@
-function random(range) {
-	let rand = Math.floor(Math.random() * range);
-	return rand === 0 ? 1 : rand;
+function random(start, end) {
+    if (end === undefined) {
+        end = start;
+        start = 0;
+    }
+    return Math.floor(Math.random() * (end - start) + start);
 }
 
 function goTo(URL) {
@@ -19,5 +22,26 @@ function dotsInRange(loops) {
 }
 
 function sleep(seconds) {
-	return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+	return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+}
+
+function parseInput(text) {
+	let output = "";
+	text = text.toString().split(" ").join("");
+	for (let i = 0; i < text.length; i++) {
+		if (cases.includes(text[i])) {
+			output += trans[text[i]];
+		} else {
+			output += text[i];
+		}
+	}
+	return output;
+}
+
+function createTopperSpan(id, data="") {
+	return `<p id="${id}" class="top-span-p flexy-center">${data}</p>`;
+}
+
+function percentOfTwo(all, wins) {
+	return Math.round((wins / all) * 100) + "%";
 }
