@@ -205,8 +205,6 @@ textarea {
     font-size: 4vw;
     font-weight: bold;
     background-color: var(--borders);
-    border: 2px solid var(--bg-secondary);
-
 }
 
 .mode {
