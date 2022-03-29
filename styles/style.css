@@ -199,6 +199,7 @@ textarea {
     z-index: 100;
     padding: .5vw;
     border-radius: 100%;
+    user-select: none;
     height: 7vw;
     width: 7vw;
     font-size: 4vw;
