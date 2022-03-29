@@ -42,7 +42,6 @@ function createDivSession(
 	let quiz = {};
 	for (let i = 0; i < level * 10; i++) {
 		let quiz = {};
-		console.log(surahRange);
 		let randomSurahChoice = random(surahRange, 114).toString();
 		let choosenSurah = ALLSURAH[randomSurahChoice];
 		let choosenSurahName = SUOR[+randomSurahChoice];
