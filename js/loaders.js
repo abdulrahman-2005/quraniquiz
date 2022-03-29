@@ -2,6 +2,7 @@ const holder = document.getElementById("sessionArea")
 
 function loadNormalSession() {
 	document.body.innerHTML = `
+	<button class="flexy-center mode islight" id="mode-button" onclick="changeMode()"></button>
 	<div id="container" class="flexy-center">
 			<div id="conty" class="quiz-container flexy-center wrap">
 				<span id="topspan" class="toptop flexy-center"></span>
@@ -16,6 +17,7 @@ function loadNormalSession() {
 
 function loadDivSession() {
 	document.body.innerHTML = `
+	<button class="flexy-center mode islight" id="mode-button" onclick="changeMode()"></button>
 	<div id="container" class="flexy-center">
 		<div class="quiz-container flexy-center wrap">
 			<span id="topspan" class="flexy-center"></span>
@@ -37,6 +39,7 @@ function loadDivSession() {
 
 function loadHome() {
 	document.body.innerHTML = `
+	<button class="flexy-center mode islight" id="mode-button" onclick="changeMode()"></button>
 	<div id="container" class = "flexy-center">
         <div class="choose flexy-center dir-col" id="sessionArea">
             <h1 class="title flexy-center">اختر المستوى</h1>
@@ -52,6 +55,7 @@ function loadHome() {
 
 function loadType() {
 	document.body.innerHTML = `
+	<button class="flexy-center mode islight" id="mode-button" onclick="changeMode()"></button>
 	<div id="container" class="flexy-center">
 			<div class="choose flexy-center dir-col" id="sessionArea">
 				<h1 class="title flexy-center">اختر النوع</h1>
