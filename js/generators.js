@@ -25,7 +25,7 @@ function createNormalSession(surahRange = random(lvlMap[level][0], lvlMap[level]
 	return sess;
 }
 
-let questions = ["اكتب رقم الاية", "اكتب الاية", "اكتب اسم السورة"];
+let questions = ["اكتب رقم الاية", "اكتب الاية", "اكتب اسم السورة", "اكتب الاية التالية"];
 
 function createDivSession(surahRange = random(lvlMap[level][0], lvlMap[level][1])) {
 	let sess = {};
@@ -38,7 +38,7 @@ function createDivSession(surahRange = random(lvlMap[level][0], lvlMap[level][1]
 		let choosenSurahName = SUOR[randomSurahChoice];
 		let randomAyahChoice = random(choosenSurah.length);
 		let choosenAyah = choosenSurah[randomAyahChoice-1 < 0 ? 0 : randomAyahChoice-1]
-		let qType = random(3);
+		let qType = random(questions.length);
 		if (qType === 0) {
             quiz.description = questions[qType];
             quiz.question = choosenAyah;
@@ -54,6 +54,11 @@ function createDivSession(surahRange = random(lvlMap[level][0], lvlMap[level][1]
             quiz.description = questions[qType];
             quiz.question = choosenAyah;
             quiz.answer = choosenSurahName;
+		} else if (qType === 3) {
+			quiz.header = {infoos: 2, info:[`اية رقم (${randomAyahChoice})`, `سورة (${choosenSurahName})`]};
+            quiz.description = questions[qType];
+            quiz.question = choosenAyah;
+            quiz.answer = choosenSurah[randomAyahChoice];
 		}
         sess[i.toString()] = quiz;
         quiz = {}
