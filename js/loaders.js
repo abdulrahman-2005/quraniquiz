@@ -17,10 +17,8 @@ function loadDivSession() {
 		<div class="quiz-container flexy-center wrap">
 			<span id="topspan" class="flexy-center"></span>
 			<textarea id="description" class="flexy-center half" readonly>
-				{" "}
 			</textarea>
 			<textarea id="question" class="flexy-center half kinda" readonly>
-				{" "}
 			</textarea>
 			<span class="flexy-center" id="userarea">
 				<button class="answer" id="submit">
@@ -28,7 +26,7 @@ function loadDivSession() {
 				</button>
 				<input type="text" id="answerInput" class="answer" />
 			</span>
-	</div>;`;
+	</div>`;
 }
 
 function loadHome(opt="YLOGS") {

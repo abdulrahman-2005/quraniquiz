@@ -63,7 +63,7 @@ function createDivSession(
 				],
 			};
 			quiz.description = questions[qType];
-			quiz.question = "___";
+			quiz.question = randomAyahChoice+1;
 			quiz.answer = choosenAyah;
 		} else if (qType === 2) {
 			quiz.header = {
