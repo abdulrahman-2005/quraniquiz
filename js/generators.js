@@ -1,6 +1,5 @@
 function createNormalSession(
-	surahRange = random(lvlMap[level][0], lvlMap[level][1]),
-	sessionType = type
+	surahRange = random(lvlMap[level][0], lvlMap[level][1])
 ) {
 	let sess = {};
 	for (let i = 0; i < level * 10; i++) {
@@ -64,7 +63,8 @@ function createDivSession(
 				],
 			};
 			quiz.description = questions[qType];
-			(quiz.question = "___"), (quiz.answer = choosenAyah);
+			quiz.question = "___";
+			quiz.answer = choosenAyah;
 		} else if (qType === 2) {
 			quiz.header = {
 				infoos: 1,
@@ -83,9 +83,10 @@ function createDivSession(
 			};
 			quiz.description = questions[qType];
 			quiz.question = choosenAyah;
-			quiz.answer = choosenSurah[randomAyahChoice];
+			quiz.answer = choosenSurah[randomAyahChoice + 1];
 		} else if (qType === 4) {
-			randomAyahChoice += randomAyahChoice < choosenSurah.length-1 ? 1 : 0;
+			randomAyahChoice +=
+				randomAyahChoice < choosenSurah.length - 1 ? 1 : 0;
 			choosenAyah = choosenSurah[randomAyahChoice];
 			quiz.header = {
 				infoos: 2,

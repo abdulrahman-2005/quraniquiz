@@ -29,3 +29,5 @@ const trans = {
 	إ: "ا",
 	" ": "",
 };
+
+let logs = ["load.type"]

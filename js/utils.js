@@ -45,3 +45,11 @@ function createTopperSpan(id, data = "") {
 function percentOfTwo(all, wins) {
 	return Math.round((wins / all) * 100);
 }
+
+function back() {
+	session = ""
+	sessionData = {}
+	if (logs.length < 2) return;
+	actions[logs[logs.length-2]].call(this, "NOLOGS");
+	logs.pop();
+}

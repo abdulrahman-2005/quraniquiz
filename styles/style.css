@@ -35,6 +35,11 @@ button {
     flex-direction: column;
 }
 
+.no-mid {
+    justify-content: unset;
+    gap: 10px;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -190,16 +195,20 @@ textarea {
     padding: .6rem;
 }
 
-.mode {
-    position: fixed;
+.util-btn {
     z-index: 100;
-    left: 10px;
-    top: 10px;
     padding: .5vw;
     border-radius: 100%;
-    height: 5vw;
-    width: 5vw;
-    font-size: 3vw;
+    height: 7vw;
+    width: 7vw;
+    font-size: 4vw;
+    font-weight: bold;
+    background-color: var(--borders);
+    border: 2px solid var(--bg-secondary);
+
+}
+
+.mode {
     /* dark button 🌙 */
     background-color: black;
     color: white
@@ -219,4 +228,15 @@ textarea {
 
 .isdark::after {
     content: "☀️";
+}
+
+.tools {
+    position: fixed;
+    z-index: 40;
+    padding-top: 2vw;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10vw;
+    background: transparent !important;
 }

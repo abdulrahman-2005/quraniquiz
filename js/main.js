@@ -128,23 +128,18 @@ class diverseSession {
 		}
 	}
 	start() {
+		let sourceData = this.sessionData[this.quizNumber.toString()];
 		this.topspan.innerHTML = createTopperSpan(
 			"question-number",
 			`السؤال (${this.quizNumber + 1})`
 		);
 		this.answerInput.focus();
-		this.questionArea.innerHTML =
-			"(( " + this.sessionData[this.quizNumber].question + " ))";
-		this.descriptionArea.innerHTML =
-			">>> " + this.sessionData[this.quizNumber].description + " <<<";
-		for (
-			let i = 0;
-			i < this.sessionData[this.quizNumber].header.infoos;
-			i++
-		) {
+		this.questionArea.innerHTML = "(( " + sourceData.question + " ))";
+		this.descriptionArea.innerHTML = sourceData.description;
+		for (let i = 0; i < sourceData.header.infoos; i++) {
 			this.topspan.innerHTML += createTopperSpan(
 				`info-${i}`,
-				this.sessionData[this.quizNumber].header.info[i]
+				sourceData.header.info[i]
 			);
 		}
 	}

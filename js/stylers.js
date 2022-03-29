@@ -74,5 +74,7 @@ function changeMode() {
 		`
 		mode = 0
 	}
+
+	
 	ModeButton.classList.toggle("isdark")
 }

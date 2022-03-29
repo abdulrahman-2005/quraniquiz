@@ -31,7 +31,10 @@ function loadDivSession() {
 	</div>;`;
 }
 
-function loadHome() {
+function loadHome(opt="YLOGS") {
+	if (opt === "YLOGS") {
+		logs.push("load.home")
+	}
 	holder.innerHTML = `
         <div class="choose flexy-center dir-col" id="sessionArea">
             <h1 class="title flexy-center">اختر المستوى</h1>
@@ -44,7 +47,10 @@ function loadHome() {
 `;
 }
 
-function loadType() {
+function loadType(opt="YLOGS") {
+	if (opt === "YLOGS") {
+		logs.push("load.type")
+	}
 	holder.innerHTML = `
 			<div class="choose flexy-center dir-col" id="sessionArea">
 				<h1 class="title flexy-center">اختر النوع</h1>
@@ -57,7 +63,10 @@ function loadType() {
 		</div>`;
 }
 
-function loadSignUp() {
+function loadSignUp(opt="YLOGS") {
+	if (opt === "YLOGS") {
+		logs.push("load.signup")
+	}
 	holder.innerHTML = `
 	<div class="choose flexy-center dir-col" id="sessionArea">
 	<style>
@@ -84,7 +93,10 @@ function loadSignUp() {
 `;
 } 
 
-function loadLogIN() {
+function loadLogIN(opt="YLOGS") {
+	if (opt === "YLOGS") {
+		logs.push("load.login")
+	}
 	holder.innerHTML = `
 	<div class="choose flexy-center dir-col" id="sessionArea">
 	<style>
@@ -109,4 +121,11 @@ function loadLogIN() {
 	<button class="flexy-center choice ll" onclick="login()">تسجيل الدخول</button>
 </div>
 `;
+}
+
+const actions = {
+	"load.home"   : loadHome,
+	"load.signup" : loadSignUp,
+	"load.login"  : loadLogIN,
+	"load.type"   : loadType
 }
