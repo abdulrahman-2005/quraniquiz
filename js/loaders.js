@@ -30,7 +30,7 @@ function loadDivSession() {
 				<input type="text" id="answerInput" class="answer" />
 			</span>
 		</div>
-	</div>;`
+	</div>;`;
 }
 
 function loadHome() {
@@ -60,5 +60,5 @@ function loadType() {
 					اسئلة متنوعة
 				</button>
 			</div>
-		</div>`
+		</div>`;
 }

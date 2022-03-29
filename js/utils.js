@@ -1,9 +1,9 @@
 function random(start, end) {
-    if (end === undefined) {
-        end = start;
-        start = 0;
-    }
-    return Math.floor(Math.random() * (end - start) + start);
+	if (end === undefined) {
+		end = start;
+		start = 0;
+	}
+	return Math.floor(Math.random() * (end - start) + start);
 }
 
 function goTo(URL) {
@@ -38,10 +38,10 @@ function parseInput(text) {
 	return output;
 }
 
-function createTopperSpan(id, data="") {
+function createTopperSpan(id, data = "") {
 	return `<p id="${id}" class="top-span-p flexy-center">${data}</p>`;
 }
 
 function percentOfTwo(all, wins) {
-	return Math.round((wins / all) * 100)
+	return Math.round((wins / all) * 100);
 }

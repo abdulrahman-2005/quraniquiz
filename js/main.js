@@ -71,7 +71,7 @@ class normalSession {
 		this.topspan.innerHTML = createTopperSpan("finisher", "النتائج");
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
 		this.questionArea.innerHTML = `{ ${percent}% }
-${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`
+${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`;
 		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
 	}
 }
@@ -98,9 +98,10 @@ class diverseSession {
 			) {
 				console.log("it is right");
 				this.data.right += 1;
-				right()
+				right();
 			} else {
-				this.questionArea.innerHTML = "[[ " + this.sessionData[this.quizNumber].answer + " ]]";
+				this.questionArea.innerHTML =
+					"[[ " + this.sessionData[this.quizNumber].answer + " ]]";
 				console.log("it is wrong");
 				this.data.wrong += 1;
 				wrong();
@@ -134,8 +135,12 @@ class diverseSession {
 		this.questionArea.innerHTML =
 			"(( " + this.sessionData[this.quizNumber].question + " ))";
 		this.descriptionArea.innerHTML =
-			">>> "+this.sessionData[this.quizNumber].description + " <<<";
-		for (let i = 0; i < this.sessionData[this.quizNumber].header.infoos; i++) {
+			">>> " + this.sessionData[this.quizNumber].description + " <<<";
+		for (
+			let i = 0;
+			i < this.sessionData[this.quizNumber].header.infoos;
+			i++
+		) {
 			this.topspan.innerHTML += createTopperSpan(
 				`info-${i}`,
 				this.sessionData[this.quizNumber].header.info[i]
@@ -145,9 +150,9 @@ class diverseSession {
 	finish() {
 		this.topspan.innerHTML = createTopperSpan("finsisher", "النتائج");
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
-		this.descriptionArea.innerHTML = "||||| النتيجة |||||"
+		this.descriptionArea.innerHTML = "||||| النتيجة |||||";
 		this.questionArea.innerHTML = `{ ${percent}% }
-${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`
+${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`;
 		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
 	}
 }
@@ -162,10 +167,10 @@ function chooseType(typeNumber) {
 function chooseLevel(lvl) {
 	level = lvl;
 	if (type === 1) {
-		sessionData = createNormalSession()
-		session = new normalSession(sessionData)
+		sessionData = createNormalSession();
+		session = new normalSession(sessionData);
 	} else if (type === 2) {
-		sessionData = createDivSession()
-		session = new diverseSession(sessionData)
+		sessionData = createDivSession();
+		session = new diverseSession(sessionData);
 	}
 }

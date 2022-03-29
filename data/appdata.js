@@ -1,8 +1,8 @@
 let level = 1;
 let type = 1;
-let sessionData = {}
+let sessionData = {};
 let session;
-let cases = ["أ", "إ","ئ", "ء", "ؤ", "آ"];
+let cases = ["أ", "إ", "ئ", "ء", "ؤ", "آ"];
 
 const lvlMap = {
 	1: [76, 114],
@@ -20,10 +20,10 @@ const lvlMap = {
 // };
 
 const trans = {
-	"أ": "ا",
-	"آ": "ا",
-	"ى" : "ي",
-	"ء": "ا",
-	"إ": "ا",
-	" ": ""
-}
+	أ: "ا",
+	آ: "ا",
+	ى: "ي",
+	ء: "ا",
+	إ: "ا",
+	" ": "",
+};
