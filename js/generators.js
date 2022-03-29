@@ -85,7 +85,8 @@ function createDivSession(
 			quiz.question = choosenAyah;
 			quiz.answer = choosenSurah[randomAyahChoice];
 		} else if (qType === 4) {
-			randomAyahChoice += 1;
+			randomAyahChoice += randomAyahChoice < choosenSurah.length-1 ? 1 : 0;
+			choosenAyah = choosenSurah[randomAyahChoice];
 			quiz.header = {
 				infoos: 2,
 				info: [

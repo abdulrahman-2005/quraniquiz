@@ -3,6 +3,8 @@ let type = 1;
 let sessionData = {};
 let session;
 let cases = ["أ", "إ", "ئ", "ء", "ؤ", "آ"];
+let users = [];
+let userCount = 0;
 
 const lvlMap = {
 	1: [76, 114],

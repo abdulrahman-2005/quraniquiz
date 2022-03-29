@@ -91,6 +91,7 @@ class diverseSession {
 		this.topspan = document.getElementById("topspan");
 		this.quizNumber = 0;
 		this.quizzesLength = Object.keys(sessionData).length;
+		this.userarea = document.getElementById("userarea");
 		this.submit.addEventListener("click", async () => {
 			if (
 				parseInput(this.answerInput.value) ===
