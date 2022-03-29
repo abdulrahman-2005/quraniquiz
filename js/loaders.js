@@ -1,3 +1,5 @@
+const holder = document.getElementById("sessionArea")
+
 function loadNormalSession() {
 	document.body.innerHTML = `
 	<div id="container" class="flexy-center">
