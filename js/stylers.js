@@ -1,13 +1,14 @@
 async function right() {
 	style.innerHTML = `
-	.quiz-container,
-	.top-span-p {
+	.quiz-container {
 			color: green !important;
 			border:5px solid green !important;
 		}
 	#question, .half {
-			color: green !important;
-		}
+		color: green !important;
+	}
+	.top-span-p {
+		bacground-color: green !important;}
 	`;
 	await sleep(2);
 	reset();
@@ -15,13 +16,15 @@ async function right() {
 
 async function wrong() {
 	style.innerHTML = `
-	.quiz-container,
-	.top-span-p {
+	.quiz-container {
 			color: red !important;
 			border:5px solid red !important;
 		}
 	#question, .half {
 		color: red !important;
+	}
+	.top-span-p {
+		background-color: red !important;
 	}
 	
 	`;
@@ -31,14 +34,12 @@ async function wrong() {
 
 function reset() {
 	style.innerHTML = `
-	.quiz-container,
-	.top-span-p {
+	.quiz-container {
 			color: var(--font-color) !important;
 			border:5px solid white !important;
 		}
 	.top-span-p {
-		color: var(--l-font-color);
-		border: none !important;
+		background-color: var(--borders) !important;
 	}
 	#question, .half {
 		color: var(--font-color) !important;

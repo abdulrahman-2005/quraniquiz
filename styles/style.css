@@ -167,6 +167,7 @@ textarea {
     width: 30%;
     font-size: 1.5rem;
     font-weight: bold;
+    padding-right: 2vw;
 }
 #answer {
     padding-right: 2vw;
