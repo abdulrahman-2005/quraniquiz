@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap');
 
 :root {
-    --bg-primary: orange;
-    --bg-secondary: gold;
-    --borders: white;
+    --bg-primary: rgb(0, 166, 255);
+    --bg-secondary: rgb(0, 217, 255);
+    --borders: rgb(255, 255, 255);
     --font-color: black;
     --l-font-color: gray;
 }

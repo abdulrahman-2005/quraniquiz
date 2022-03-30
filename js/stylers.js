@@ -8,7 +8,7 @@ async function right() {
 		color: green !important;
 	}
 	.top-span-p {
-		bacground-color: green !important;}
+		background-color: green !important;}
 	`;
 	await sleep(2);
 	reset();
@@ -47,10 +47,9 @@ function reset() {
 	`;
 }
 
-
 const Mode = document.getElementById("mode");
 const ModeButton = document.getElementById("mode-button");
-let mode = 0
+let mode = 0;
 function changeMode() {
 	if (mode === 0) {
 		Mode.innerHTML = `
@@ -61,21 +60,21 @@ function changeMode() {
 			--font-color: white;
 			--l-font-color: gray;
 		}
-		`
-		mode = 1
+		`;
+		mode = 1;
 	} else {
 		Mode.innerHTML = `
-		:root {
-			--bg-primary: orange;
-			--bg-secondary: gold;
-			--borders: white;
-			--font-color: black;
-			--l-font-color: gray;
-		}
-		`
-		mode = 0
+		
+:root {
+    --bg-primary: rgb(0, 166, 255);
+    --bg-secondary: rgb(0, 217, 255);
+    --borders: rgb(255, 255, 255);
+    --font-color: black;
+    --l-font-color: gray;
+}
+		`;
+		mode = 0;
 	}
 
-	
-	ModeButton.classList.toggle("isdark")
+	ModeButton.classList.toggle("isdark");
 }
