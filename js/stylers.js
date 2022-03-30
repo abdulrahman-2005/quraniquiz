@@ -78,3 +78,13 @@ function changeMode() {
 
 	ModeButton.classList.toggle("isdark");
 }
+
+
+async function alertCustom(text) {
+	let alerter = document.getElementById("alert");
+	alerter.style.display = "block";
+	alerter.innerHTML = text;
+	await sleep(2)
+	alerter.style.display = "none";
+	alerter.innerHTML = "";
+}

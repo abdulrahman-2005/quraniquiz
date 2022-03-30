@@ -170,3 +170,7 @@ function chooseLevel(lvl) {
 		session = new diverseSession(sessionData);
 	}
 }
+
+function creator() {
+	alertCustom("تم انشاء هذا الموقع من قبل: عبدالرحمن عزمي<br>copy right Abdulrahman Azmy Ⓒ  2022");
+}

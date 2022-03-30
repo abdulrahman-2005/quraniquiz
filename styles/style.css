@@ -240,3 +240,44 @@ textarea {
     width: 10vw;
     background: transparent !important;
 }
+
+#alert {
+    display: none;
+    top: 25%;
+    left: 25%;
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    padding: 2vw;
+    background-color: var(--bg-primary);
+    color: var(--borders);
+    border: 5px solid var(--font-color);
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0;
+    border-top-right-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.creator {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creator::after {
+    content: "😎"
+}
+
+*::-webkit-scrollbar {
+    width: 5vw;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--bg-primary);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bg-secondary);
+}
