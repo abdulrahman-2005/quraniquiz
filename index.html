@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="هل تحفظ القرءان الكريم، اختبر مدى حفظك للقرءان عن طريق حل عدد غير محدود من الاسئلة المخصصة لكل المستويات على Qurani Quiz">
-		<meta name="keywords" content="quran, quraniquiz, القرءان, quiz, islam, اسئلة, المستويات">
-		<meta name="author" content="Abdulrahman Azmy"/>
-		<title>Quran Quiz</title>
-		<link rel="stylesheet" href="styles/style.css" />
-		<script src="data/appdata.js"></script>
-		<script src="data/qurandata.js"></script>
-		<style id="mainStyle"></style>
-		<style id="mode"></style>
-		<script>
-			const style = document.getElementById("mainStyle");
-		</script>
-	</head>
 
-	<body>
-		<div class="flexy-center no-mid dir-col tools ">
-			<div class="flexy-center dir-col"id="alert"></div>
-			<button class="flexy-center util-btn" onclick="back()">←</button>
-			<button class="flexy-center util-btn mode" id="mode-button" onclick="changeMode()"></button>
-			<button class="flexy-center util-btn creator" onclick="creator()"></button>
-		</div>
-		<div id="container" class="flexy-center">
-			<div class="choose flexy-center dir-col" id="sessionArea">
-				<h1 class="title flexy-center">اختر النوع</h1>
-				<button class="choice flexy-center" onclick="chooseType(1)">
-					اسئلة اكمال
-				</button>
-				<button class="choice flexy-center" onclick="chooseType(2)">
-					اسئلة متنوعة
-				</button>
-			</div>
-		</div>
-		<div id="NAVNAVGO"></div>
-		<script src="./js/utils.js"></script>
-		<script src="./js/generators.js"></script>
-		<script src="./js/loaders.js"></script>
-		<script src="./js/stylers.js"></script>
-		<script src="./js/main.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="هل تحفظ القرءان الكريم، اختبر مدى حفظك للقرءان عن طريق حل عدد غير محدود من الاسئلة المخصصة لكل المستويات على Qurani Quiz" />
+	<meta name="keywords" content="quran, quraniquiz, القرءان, quiz, islam, اسئلة, المستويات" />
+	<meta name="author" content="Abdulrahman Azmy" />
+	<title>Quran Quiz</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script src="data/qurandata.js"></script>
+	<script src="data/appdata.js"></script>
+	<style id="mainStyle"></style>
+	<style id="mode"></style>
+	<script>
+		const style = document.getElementById("mainStyle");
+	</script>
+</head>
+
+<body>
+	<div class="flexy-center no-mid dir-col tools">
+		<div class="flexy-center dir-col" id="alert"></div>
+		<button class="flexy-center util-btn" onclick="back()">←</button>
+		<button class="flexy-center util-btn mode" id="mode-button" onclick="changeMode()"></button>
+		<button class="flexy-center util-btn" id="lang-button" onclick="changeLanguage()">En</button>
+		<button class="flexy-center util-btn creator" onclick="creator()"></button>
+	</div>
+	<div id="container" class="flexy-center"></div>
+	<div id="NAVNAVGO"></div>
+	<script src="./js/utils.js"></script>
+	<script src="./js/generators.js"></script>
+	<script src="./js/loaders.js"></script>
+	<script src="./js/stylers.js"></script>
+	<script src="./js/main.js"></script>
+	<script>loadType()</script>
+</body>
+
 </html>

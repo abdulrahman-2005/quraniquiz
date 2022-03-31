@@ -47,9 +47,17 @@ function percentOfTwo(all, wins) {
 }
 
 function back() {
-	session = ""
-	sessionData = {}
+	session = "";
+	sessionData = {};
 	if (logs.length < 2) return;
-	actions[logs[logs.length-2]].call(this, "NOLOGS");
+	actions[logs[logs.length - 2]].call(this, "NOLOGS");
 	logs.pop();
+}
+
+const changeLangButton = document.getElementById("lang-button");
+function changeLanguage() {
+	changeLangButton.innerHTML = language;
+	language = language === "Ar" ? "En" : "Ar";
+	actions[logs[logs.length - 1]].call(this, "NOLOGS");
+	ALLSURAH = language === "Ar" ? ALLSURAHARABIC : ALLSURAHENGLISH;
 }

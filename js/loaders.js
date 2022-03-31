@@ -7,7 +7,7 @@ function loadNormalSession() {
 				<textarea  id="question" class="flexy-center" readonly></textarea>
 				<span id="userarea" class="flexy-center">
 					<input type="text" id="answer" class="answer">
-					<button class="answer" id="submit">استمر</button>
+					<button class="answer" id="submit"> ${alldata[language].submit} </button>
 				</span>
 		</div>`;
 }
@@ -22,7 +22,7 @@ function loadDivSession() {
 			</textarea>
 			<span class="flexy-center" id="userarea">
 				<button class="answer" id="submit">
-					استمر
+				${alldata[language].submit}
 				</button>
 				<input type="text" id="answerInput" class="answer" />
 			</span>
@@ -35,12 +35,12 @@ function loadHome(opt="YLOGS") {
 	}
 	holder.innerHTML = `
         <div class="choose flexy-center dir-col" id="sessionArea">
-            <h1 class="title flexy-center">اختر المستوى</h1>
-            <button class="choice flexy-center" onclick="chooseLevel(5)">المستوى الاعلى</button>
-            <button class="choice flexy-center" onclick="chooseLevel(4)">المستوى الرابع</button>
-            <button class="choice flexy-center" onclick="chooseLevel(3)">المستوى الثالث</button>
-            <button class="choice flexy-center" onclick="chooseLevel(2)">المستوى الثاني</button>
-            <button class="choice flexy-center" onclick="chooseLevel(1)">المستوى الاول</button>
+            <h1 class="title flexy-center">${alldata[language].content.chooseLevel}</h1>
+            <button class="choice flexy-center" onclick="chooseLevel(5)"> ${alldata[language].content.levels[0]} </button>
+            <button class="choice flexy-center" onclick="chooseLevel(4)">${alldata[language].content.levels[1]}</button>
+            <button class="choice flexy-center" onclick="chooseLevel(3)">${alldata[language].content.levels[2]}</button>
+            <button class="choice flexy-center" onclick="chooseLevel(2)">${alldata[language].content.levels[3]}</button>
+            <button class="choice flexy-center" onclick="chooseLevel(1)">${alldata[language].content.levels[4]}</button>
         </div>
 `;
 }
@@ -51,12 +51,12 @@ function loadType(opt="YLOGS") {
 	}
 	holder.innerHTML = `
 			<div class="choose flexy-center dir-col" id="sessionArea">
-				<h1 class="title flexy-center">اختر النوع</h1>
+				<h1 class="title flexy-center">${alldata[language].content.type.chooseType} </h1>
 				<button class="choice flexy-center" onclick="chooseType(1)">
-					اسئلة اكمال
+					${alldata[language].content.type.continuosQuestions}
 				</button>
 				<button class="choice flexy-center" onclick="chooseType(2)">
-					اسئلة متنوعة
+				${alldata[language].content.type.diversiveQuestions}
 				</button>
 		</div>`;
 }

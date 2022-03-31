@@ -5,6 +5,7 @@ let session;
 let cases = ["أ", "إ", "ئ", "ء", "ؤ", "آ"];
 let users = [];
 let userCount = 0;
+let language = "Ar";
 
 const lvlMap = {
 	1: [76, 114],
@@ -30,4 +31,79 @@ const trans = {
 	" ": "",
 };
 
-let logs = ["load.type"]
+let logs = ["load.type"];
+
+
+const alldata = {
+	Ar: {
+		settings: {
+			direction: "rtl"
+		},
+		questions: [
+			"اكتب رقم الاية",
+			"اكتب الاية",
+			"اكتب اسم السورة",
+			"اكتب الاية التي تلي",
+			"اكتب الاية السابقة",
+		],
+		allsurahs: ALLSURAHARABIC,
+		content: {
+			type: {
+				chooseType: "اختر نوع الاسئلة",
+				continuosQuestions: "اسئلة اكمال",
+				diversiveQuestions: "اسئلة متنوعة",
+			},
+			chooseLevel: "اختر المستوى",
+			levels: [
+				"المستوى الاعلى",
+				"المستوى الرابع",
+				"المستوى الثالث",
+				"المستوى الثاني",
+				"المستوى الاول",
+			],
+			submit: "استمر",
+			juz: "جزء",
+			surah: "سورة",
+			ayah: "اية رقم",
+			scores: "النتائج",
+			finsih: "انهاء",
+		},
+	},
+	En: {
+		settings: {
+			direction: "ltr"
+		},
+		questions: [
+			"Enter the number of the verse",
+			"Enter the verse",
+			"Enter the name of the surah",
+			"Enter the next verse",
+			"Enter the previous verse",
+		],
+		allsurahs: ALLSURAHENGLISH,
+		content: {
+			type: {
+				chooseType: "Choose the type",
+				continuosQuestions: "Continuous questions",
+				diversiveQuestions: "Diversive questions",
+			},
+			chooseLevel: "Choose the level",
+			levels: [
+				"Highest level",
+				"Fourth level",
+				"Third level",
+				"Second level",
+				"First level",
+			],
+		},
+		submit: "Submit",
+		juz: "Juz",
+		surah: "Surah",
+		ayah: "Ayah Number",
+		scores: "Scores",
+		finsih: "Finish",
+	},
+};
+
+
+let ALLSURAH = alldata[language].allsurahs;

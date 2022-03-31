@@ -1,13 +1,12 @@
+#parse the jsonfile quraninen.json and make it similar to the qurandata.json
 import json
-
-with open('E:/body/vsc/projectQuranQuiz/helpers/qurandata.json', "r") as f:
-    data = json.load(f)
-
-newdata = {}
-
-for i in data:
-    data[i][0] = data[i][0].replace("\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062d\u0645\u0646 \u0627\u0644\u0631\u062d\u064a\u0645", "")
-    newdata[i] = data[i]
-
-with open("newdata.json", "w") as f:
-    json.dump(newdata, f, indent=4)
+data = {}
+with open('E:/body/vsc/projectQuranQuiz/helpers/quraninen.json', "r") as f:
+    quran = json.load(f)
+for i in quran:
+    surah = []
+    for j in range(len(quran[i])):
+        surah.append(quran[i][j]['text'])
+    data[str(i)] = surah
+with open('qurandataEN.json', 'w') as f:
+    json.dump(data, f, indent=4)

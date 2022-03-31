@@ -27,17 +27,11 @@ function createNormalSession(
 	return sess;
 }
 
-let questions = [
-	"اكتب رقم الاية",
-	"اكتب الاية",
-	"اكتب اسم السورة",
-	"اكتب الاية التي تلي",
-	"اكتب الاية السابقة",
-];
-
+let questions;
 function createDivSession(
 	surahRange = random(lvlMap[level][0], lvlMap[level][1])
 ) {
+	questions = alldata[language].questions
 	let sess = {};
 	let quiz = {};
 	for (let i = 0; i < level * 10; i++) {
