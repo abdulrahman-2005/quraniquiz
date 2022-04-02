@@ -94,14 +94,13 @@ const alldata = {
 				"Third level",
 				"Second level",
 				"First level",
-			],
-		},
-		submit: "Submit",
+			],submit: "Submit",
 		juz: "Juz",
 		surah: "Surah",
 		ayah: "Ayah Number",
 		scores: "Scores",
 		finsih: "Finish",
+		},
 	},
 };
 
