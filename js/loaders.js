@@ -7,7 +7,7 @@ function loadNormalSession() {
 				<textarea  id="question" class="flexy-center" readonly></textarea>
 				<span id="userarea" class="flexy-center">
 					<input type="text" id="answer" class="answer">
-					<button class="answer" id="submit"> ${alldata[language].submit} </button>
+					<button class="answer" id="submit"> ${alldata[language].content.submit} </button>
 				</span>
 		</div>`;
 }
@@ -22,7 +22,7 @@ function loadDivSession() {
 			</textarea>
 			<span class="flexy-center" id="userarea">
 				<button class="answer" id="submit">
-				${alldata[language].submit}
+				${alldata[language].content.submit}
 				</button>
 				<input type="text" id="answerInput" class="answer" />
 			</span>
