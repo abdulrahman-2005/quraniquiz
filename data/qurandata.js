@@ -6581,5 +6581,3 @@ const SUOR = [
 	"الفلق",
 	"الناس",
 ];
-
-let ALLSURAHENGLISH

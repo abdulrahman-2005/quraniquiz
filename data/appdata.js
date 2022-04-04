@@ -80,7 +80,7 @@ const alldata = {
 			"Enter the next verse",
 			"Enter the previous verse",
 		],
-		allsurahs: ALLSURAHENGLISH,
+		allsurahs: ALLSURAHARABIC,
 		content: {
 			type: {
 				chooseType: "Choose the type",
