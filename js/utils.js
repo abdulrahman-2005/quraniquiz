@@ -59,5 +59,6 @@ function changeLanguage() {
 	changeLangButton.innerHTML = language;
 	language = language === "Ar" ? "En" : "Ar";
 	actions[logs[logs.length - 1]].call(this, "NOLOGS");
-	ALLSURAH = language === "Ar" ? ALLSURAHARABIC : ALLSURAHENGLISH;
+	ALLSURAH = ALLSURAHARABIC;
+	SUOR = language === "Ar" ? SUORAR : SUOREN;
 }

@@ -6,6 +6,8 @@
     --borders: rgb(255, 255, 255);
     --font-color: black;
     --l-font-color: gray;
+    --right: rgb(0, 255, 0);
+    --wrong: rgb(255, 0, 0);
 }
 
 
@@ -104,17 +106,19 @@ button {
 .top-span-p {
     background: var(--borders);
     font-weight: bold;
-    color: gray;
+    color: var(--l-font-color) !important;
     height: fit-content !important;
     width: fit-content;
     height: fit-content;
     padding: .3rem;
     user-select: none;
+    font-size: 1rem;
+    line-height: 4vw;
 }
 
 .top-span-p:hover {
     background: var(--font-color);
-    color: gold;
+    color: var(--bg-primary) !important;
 }
 
 

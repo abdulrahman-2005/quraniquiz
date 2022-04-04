@@ -5,8 +5,7 @@ let session;
 let cases = ["أ", "إ", "ئ", "ء", "ؤ", "آ"];
 let users = [];
 let userCount = 0;
-let language = "Ar";
-
+let language = "Ar"
 const lvlMap = {
 	1: [76, 114],
 	2: [39, 67],
@@ -33,11 +32,10 @@ const trans = {
 
 let logs = ["load.type"];
 
-
 const alldata = {
 	Ar: {
 		settings: {
-			direction: "rtl"
+			direction: "rtl",
 		},
 		questions: [
 			"اكتب رقم الاية",
@@ -67,11 +65,12 @@ const alldata = {
 			ayah: "اية رقم",
 			scores: "النتائج",
 			finsih: "انهاء",
+			question: "السؤال",
 		},
 	},
 	En: {
 		settings: {
-			direction: "ltr"
+			direction: "ltr",
 		},
 		questions: [
 			"Enter the number of the verse",
@@ -94,15 +93,16 @@ const alldata = {
 				"Third level",
 				"Second level",
 				"First level",
-			],submit: "Submit",
-		juz: "Juz",
-		surah: "Surah",
-		ayah: "Ayah Number",
-		scores: "Scores",
-		finsih: "Finish",
+			],
+			submit: "Submit",
+			juz: "Juz",
+			surah: "Surah",
+			ayah: "Ayah",
+			scores: "Scores",
+			finsih: "Finish",
+			question: "Question",
 		},
 	},
 };
-
 
 let ALLSURAH = alldata[language].allsurahs;

@@ -1,14 +1,14 @@
 async function right() {
 	style.innerHTML = `
 	.quiz-container {
-			color: green !important;
-			border:5px solid green !important;
+			color: var(--right) !important;
+			border:5px solid var(--right) !important;
 		}
 	#question, .half {
-		color: green !important;
+		color: var(--right) !important;
 	}
 	.top-span-p {
-		background-color: green !important;}
+		background-color: var(--right) !important;}
 	`;
 	await sleep(2);
 	reset();
@@ -17,14 +17,14 @@ async function right() {
 async function wrong() {
 	style.innerHTML = `
 	.quiz-container {
-			color: red !important;
-			border:5px solid red !important;
+			color: var(--wrong) !important;
+			border:5px solid var(--wrong) !important;
 		}
 	#question, .half {
-		color: red !important;
+		color: var(--wrong) !important;
 	}
 	.top-span-p {
-		background-color: red !important;
+		background-color: var(--wrong) !important;
 	}
 	
 	`;
@@ -59,6 +59,8 @@ function changeMode() {
 			--borders: rgb(90, 0, 149);
 			--font-color: white;
 			--l-font-color: gray;
+			--right: rgb(0, 255, 0);
+			--wrong: rgb(255, 0, 0);
 		}
 		`;
 		mode = 1;
@@ -71,6 +73,8 @@ function changeMode() {
     --borders: rgb(255, 255, 255);
     --font-color: black;
     --l-font-color: gray;
+    --right: rgb(0, 255, 0);
+    --wrong: rgb(255, 0, 0);
 }
 		`;
 		mode = 0;

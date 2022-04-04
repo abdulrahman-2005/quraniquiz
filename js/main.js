@@ -57,13 +57,13 @@ class normalSession {
 	}
 	start() {
 		this.answerInput.focus();
-		this.questionNumber.innerHTML = `السؤال (${this.quizNumber + 1})`;
+		this.questionNumber.innerHTML = `${alldata[language].content.question} (${this.quizNumber + 1})`;
 		this.questionArea.innerHTML =
 			this.sessionData[this.quizNumber.toString()].question;
-		this.surahname.innerHTML = `سورة ${
+		this.surahname.innerHTML = `${alldata[language].content.surah} ${
 			this.sessionData[this.quizNumber.toString()].data.surah
 		}`;
-		this.ayahnumber.innerHTML = `الاية (${
+		this.ayahnumber.innerHTML = `${alldata[language].content.ayah} (${
 			this.sessionData[this.quizNumber.toString()].data.ayah + 1
 		})`;
 	}
