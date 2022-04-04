@@ -46,13 +46,13 @@ function createDivSession(
 			quiz.description = questions[qType];
 			quiz.question = choosenAyah;
 			quiz.answer = randomAyahChoice + 1;
-			quiz.header = { infoos: 1, info: [`سورة (${choosenSurahName})`] };
+			quiz.header = { infoos: 1, info: [`${alldata[language].content.surah} (${choosenSurahName})`] };
 		} else if (qType === 1) {
 			quiz.header = {
 				infoos: 2,
 				info: [
-					`اية رقم (${randomAyahChoice + 1})`,
-					`سورة (${choosenSurahName})`,
+					`${alldata[language].content.ayah} (${randomAyahChoice + 1})`,
+					`${alldata[language].content.surah} (${choosenSurahName})`,
 				],
 			};
 			quiz.description = questions[qType];
@@ -61,7 +61,7 @@ function createDivSession(
 		} else if (qType === 2) {
 			quiz.header = {
 				infoos: 1,
-				info: [`اية رقم (${randomAyahChoice + 1})`],
+				info: [`${alldata[language].content.ayah} (${randomAyahChoice + 1})`],
 			};
 			quiz.description = questions[qType];
 			quiz.question = choosenAyah;
@@ -70,8 +70,8 @@ function createDivSession(
 			quiz.header = {
 				infoos: 2,
 				info: [
-					`اية رقم (${randomAyahChoice + 1})`,
-					`سورة (${choosenSurahName})`,
+					`${alldata[language].content.ayah} (${randomAyahChoice + 1})`,
+					`${alldata[language].content.surah} (${choosenSurahName})`,
 				],
 			};
 			quiz.description = questions[qType];
@@ -84,8 +84,8 @@ function createDivSession(
 			quiz.header = {
 				infoos: 2,
 				info: [
-					`اية رقم (${randomAyahChoice + 1})`,
-					`سورة (${choosenSurahName})`,
+					`${alldata[language].content.ayah} (${randomAyahChoice + 1})`,
+					`${alldata[language].content.surah} (${choosenSurahName})`,
 				],
 			};
 			quiz.description = questions[qType];

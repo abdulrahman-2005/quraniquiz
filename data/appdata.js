@@ -64,8 +64,10 @@ const alldata = {
 			surah: "سورة",
 			ayah: "اية رقم",
 			scores: "النتائج",
-			finsih: "انهاء",
+			finish: "انهاء",
 			question: "السؤال",
+			tryagain: "لعلك تحاول مرة اخرى",
+			welldone: "احسنت",
 		},
 	},
 	En: {
@@ -99,8 +101,10 @@ const alldata = {
 			surah: "Surah",
 			ayah: "Ayah",
 			scores: "Scores",
-			finsih: "Finish",
+			finish: "Finish",
 			question: "Question",
+			tryagain: "wish you Try again",
+			welldone: "Well done",
 		},
 	},
 };

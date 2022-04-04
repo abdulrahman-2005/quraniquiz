@@ -68,11 +68,11 @@ class normalSession {
 		})`;
 	}
 	finish() {
-		this.topspan.innerHTML = createTopperSpan("finisher", "النتائج");
+		this.topspan.innerHTML = createTopperSpan("finisher", alldata[language].content.scores);
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
 		this.questionArea.innerHTML = `{ ${percent}% }
-${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`;
-		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
+${percent > 50 ? alldata[language].content.welldone : alldata[language].content.tryagain}`;
+		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> ${alldata[language].content.finish} </button>`;
 	}
 }
 
@@ -144,12 +144,12 @@ class diverseSession {
 		}
 	}
 	finish() {
-		this.topspan.innerHTML = createTopperSpan("finsisher", "النتائج");
+		this.topspan.innerHTML = createTopperSpan("finsisher", alldata[language].content.scores);
 		let percent = percentOfTwo(this.quizzesLength, this.data.right);
-		this.descriptionArea.innerHTML = "||||| النتيجة |||||";
+		this.descriptionArea.innerHTML = `||||| ${alldata[language].content.scores} |||||`;
 		this.questionArea.innerHTML = `{ ${percent}% }
-${percent > 50 ? "أحسنت" : "لعلك تحاول مرة أخرى"}`;
-		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> انهاء </button>`;
+${percent > 50 ? alldata[language].content.welldone : alldata[language].content.tryagain}`;
+		this.userarea.innerHTML = `<button class="finish flexy-center" onclick="loadType()"> ${alldata[language].content.finish} </button>`;
 	}
 }
 
