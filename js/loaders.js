@@ -58,7 +58,25 @@ function loadType(opt="YLOGS") {
 				<button class="choice flexy-center" onclick="chooseType(2)">
 				${alldata[language].content.type.diversiveQuestions}
 				</button>
+				<button class="choice flexy-center" onclick="loadCustomQuiz()">
+				${alldata[language].content.type.customQuestions}
+				</button>
+				
 		</div>`;
+}
+
+function loadCustomQuiz(opt="YLOGS") {
+	if (opt === "YLOGS") {
+		logs.push("load.signup")
+	}
+	let surahList = language === "Ar" ? SUORAR : SUOREN
+	let HTMLSHOW = `<div class="choose flexy-center dir-col" id="sessionArea">
+	<div class="surahsChoice">`
+	for (let surah = 1; surah<surahList.length; surah++) {
+		HTMLSHOW += `<button class="choice chooseSurah" onclick="createNormalSession(type='custom', surah=${surah})">${surahList[surah]}</button>`
+	}
+	HTMLSHOW += "</div><div>"
+	holder.innerHTML = HTMLSHOW
 }
 
 function loadSignUp(opt="YLOGS") {

@@ -1,11 +1,19 @@
 function createNormalSession(
+	type="random",
+	surah=1,
 	surahRange = random(lvlMap[level][0], lvlMap[level][1])
 ) {
 	let sess = {};
 	for (let i = 0; i < level * 10; i++) {
 		let quiz = {};
-		let randomSurahChoice = random(surahRange, lvlMap[level][1]).toString();
-		let choosenSurah = ALLSURAH[randomSurahChoice];
+		let choosenSurah;
+		let randomSurahChoice;
+		if (type === "random") {
+			randomSurahChoice = random(surahRange, lvlMap[level][1]).toString();
+			choosenSurah = ALLSURAH[randomSurahChoice];
+		} else {
+			choosenSurah = ALLSURAH[surah]
+		}
 		let randomAyahChoice = random(choosenSurah.length);
 		let choosenAyah = choosenSurah[randomAyahChoice].split(" ");
 		let randomWordChoice = random(choosenAyah.length);
@@ -19,10 +27,14 @@ function createNormalSession(
 		quiz["reveal"] = choosenAyahCopy.join(" ");
 		quiz["question"] = choosenAyah.join(" ");
 		quiz["data"] = {
-			surah: SUOR[randomSurahChoice],
+			surah: SUOR[surah],
 			ayah: randomAyahChoice,
 		};
 		sess[i.toString()] = quiz;
+	}
+	if (type === "custom") {
+		session = new normalSession(sess)
+		sessionData = sess
 	}
 	return sess;
 }

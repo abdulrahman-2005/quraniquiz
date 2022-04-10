@@ -22,7 +22,19 @@ function dotsInRange(loops) {
 }
 
 function sleep(seconds) {
-	return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+	return new Promise((resolve) => {
+		mousePrevent(seconds)
+		setTimeout(resolve, seconds * 1000);
+	});
+}
+
+function setClicks() {
+	document.body.style.pointerEvents = "auto"
+}
+
+async function mousePrevent(seconds) {
+	document.body.style.pointerEvents = "none"
+	setTimeout(setClicks,   seconds * 1000 )
 }
 
 function parseInput(text) {

@@ -50,6 +50,7 @@ const alldata = {
 				chooseType: "اختر نوع الاسئلة",
 				continuosQuestions: "اسئلة اكمال",
 				diversiveQuestions: "اسئلة متنوعة",
+				customQuestions: "اسئلة خاصة"
 			},
 			chooseLevel: "اختر المستوى",
 			levels: [
@@ -87,6 +88,7 @@ const alldata = {
 				chooseType: "Choose the type",
 				continuosQuestions: "Continuous questions",
 				diversiveQuestions: "Diversive questions",
+				customQuestions: "Qustom ones"
 			},
 			chooseLevel: "Choose the level",
 			levels: [

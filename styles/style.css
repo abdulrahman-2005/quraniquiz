@@ -51,9 +51,12 @@ button {
     border-radius: 0;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background: var(--bg-primary);
+    overflow: scroll;
+    overflow-x: hidden;
+    direction: ltr;
 }
 
 .choose {
@@ -284,4 +287,24 @@ textarea {
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--bg-secondary);
+}
+
+.surahsChoice {
+    height: 95%;
+    width: 95%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chooseSurah {
+    padding: .5rem;
+    font-size: 1.5rem;
+    width: 80%;
+    border-radius: .5vw;
+    font-weight: bold;
+    margin: .2rem;
+}
+
+button {
+    user-select: none !important;
 }
