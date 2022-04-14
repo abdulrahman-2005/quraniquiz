@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap');
-
 :root {
     --bg-primary: rgb(0, 166, 255);
     --bg-secondary: rgb(0, 217, 255);
@@ -11,12 +9,17 @@
 }
 
 
+@font-face {
+    font-family: kufi;
+    src: url("./kufi.ttf");
+}
+
 * {
+    direction: rtl;
     padding: 0;
     margin: 0;
     border-radius: 1rem;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    direction: rtl;
+    font-family: kufi;
     color: var(--font-color) !important;
     transition: .3s !important;
 }
@@ -74,7 +77,7 @@ button {
     width: 80%;
     margin: 1vh;
     padding: 2vh;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     transition: .3s;
 }
@@ -86,7 +89,7 @@ button {
 
 .choose .title {
     background: transparent;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 0;
     border-bottom: 5px solid var(--font-color);
     height: 5vh;
@@ -101,7 +104,7 @@ button {
     height: 60%;
     border: none;
     outline: none;
-    font-size: 3rem;
+    font-size: 4vw;
     font-weight: bold;
     resize: none;
 }
@@ -115,7 +118,7 @@ button {
     height: fit-content;
     padding: .3rem;
     user-select: none;
-    font-size: 1rem;
+    font-size: .7rem;
     line-height: 4vw;
 }
 
@@ -156,14 +159,14 @@ textarea {
     height: 60%;
     border: none;
     outline: none;
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: bold;
     resize: none;
 }
 
 .half {
     height: 30% !important;
-    font-size: 2.5rem !important;
+    font-size: 4vw !important;
 }
 
 .answer {
@@ -172,7 +175,7 @@ textarea {
     border: none;
     outline: none;
     width: 30%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     padding-right: 2vw;
 }
@@ -187,7 +190,7 @@ textarea {
 
 .finish {
     width: 80%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-right: 2vw;
     padding-left: 2vw;
     background: var(--borders);
@@ -203,14 +206,46 @@ textarea {
     padding: .6rem;
 }
 
+
+*::-webkit-scrollbar {
+    width: 5vw;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--bg-primary);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bg-secondary);
+}
+
+.surahsChoice {
+    height: 95%;
+    width: 95%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chooseSurah {
+    padding: .5rem;
+    font-size: 1rem;
+    width: 80%;
+    border-radius: .5vw;
+    font-weight: bold;
+    margin: .2rem;
+}
+
+button {
+    user-select: none !important;
+}
 .util-btn {
     z-index: 100;
     padding: .5vw;
     border-radius: 100%;
     user-select: none;
-    height: 7vw;
-    width: 7vw;
-    font-size: 4vw;
+    height: 9vw;
+    width: 9vw;
+    font-size: 3vw;
     font-weight: bold;
     background-color: var(--borders);
 }
@@ -248,6 +283,10 @@ textarea {
     background: transparent !important;
 }
 
+.tools * {
+    font-family: helvetica !important;
+}
+
 #alert {
     display: none;
     top: 25%;
@@ -277,34 +316,41 @@ textarea {
     content: "😎"
 }
 
-*::-webkit-scrollbar {
-    width: 5vw;
-}
 
-*::-webkit-scrollbar-track {
+
+#menuContainer {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
     background-color: var(--bg-primary);
+    display: none;
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: var(--bg-secondary);
-}
-
-.surahsChoice {
-    height: 95%;
-    width: 95%;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-.chooseSurah {
-    padding: .5rem;
-    font-size: 1.5rem;
+#menuContainer button {
     width: 80%;
-    border-radius: .5vw;
+    height: 15%;
+    font-size: 2rem;
     font-weight: bold;
-    margin: .2rem;
+    font-family: helvetica;
+    color: var(--font-color);
+    background-color: var(--borders);
 }
 
-button {
-    user-select: none !important;
+.show {
+    z-index: 20;
+    display: flex !important;
+}
+
+.closeMenu {
+    position: absolute;
+    background-color: var(--bg-secondary);
+    color: var(--font-color);
+    top: 5%;
+    right: 10%;
+    padding: .5rem;
+    cursor: pointer;
 }

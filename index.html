@@ -15,18 +15,25 @@
 	<script src="data/appdata.js"></script>
 	<style id="mainStyle"></style>
 	<style id="mode"></style>
+	<style id="font"></style>
 	<script>
 		const style = document.getElementById("mainStyle");
 	</script>
 </head>
 
 <body>
+	<div id="menuContainer" class="flexy-center dir-col" style="gap: 10px;">
+		<span class="closeMenu" onclick="menu()">&#10005;</span>
+		<button class="flexy-center  mode" id="mode-button" onclick="changeMode()"></button>
+		<button class="flexy-center " id="lang-button" onclick="changeLanguage()">En</button>
+		<button class="flexy-center  creator" onclick="creator()"></button>
+		<button class="flexy-center " onclick="goTo('./download')">⤓</button>
+
+	</div>
 	<div class="flexy-center no-mid dir-col tools">
 		<div class="flexy-center dir-col" id="alert"></div>
+		<button class="flexy-center util-btn menu" onclick="menu()">⚙️</button>
 		<button class="flexy-center util-btn" onclick="back()">←</button>
-		<button class="flexy-center util-btn mode" id="mode-button" onclick="changeMode()"></button>
-		<button class="flexy-center util-btn" id="lang-button" onclick="changeLanguage()">En</button>
-		<button class="flexy-center util-btn creator" onclick="creator()"></button>
 	</div>
 	<div id="container" class="flexy-center"></div>
 	<div id="NAVNAVGO"></div>

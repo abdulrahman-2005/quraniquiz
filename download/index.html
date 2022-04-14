@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <style>
+        * {
+            font-family: helvetica;
+            direction: ltr;
+        }
+        #conty {
+            position: absolute;
+            flex-direction: row;
+            gap: 1vw;
+        }
+
+        .download {
+            position: relative;
+            background-color: var(--borders);
+            height: 50vh;
+            width: 30vw;
+            gap: 0;
+            padding: 2vw;
+            cursor: pointer;
+        }
+
+        .download img {
+            height: 80%;
+            width: 60%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .download:hover {
+            background-color: var(--bg-primary);
+        }
+
+        .download span {
+            font-size: 2vw;
+            margin-top: 1vw;
+            line-height: 5vw;
+        }
+
+        .download span:hover {
+            text-decoration: underline;
+        }
+        .title {
+            font-size: 3vw;
+            line-height: 5vw;
+        }
+    </style>
+    <script src="../data/appdata.js"></script>
+    <style id="mainStyle"></style>
+    <style id="mode"></style>
+    <style id="font"></style>
+</head>
+
+<body>
+	<div class="flexy-center no-mid dir-col tools">
+		<button class="flexy-center util-btn" onclick="goTo('..')">←</button>
+	</div>
+    <div id="container" class="flexy-center dir-col">
+        <h1 class="title">
+            Download QuraniQuiz for your platform
+        </h1>
+        <div id="conty" class="quiz-container flexy-center wrap">
+
+            <a href="./quraniQuizAndroid.apk" class="download flexy-center dir-col" download>
+                <img src="./android.png" alt="Android Download Image" />
+                <span>Android</span></a>
+            <!-- <a download="" class="download flexy-center dir-col">
+                <img src="./ios.png" alt="IOS Download Image" />
+                <span>Ios</span>
+            </a>
+            <a download="" class="download flexy-center dir-col">
+                <img src="./windows.png" alt="Windows Download Image" /><span>Windows</span></a> -->
+        </div>
+        <h1 class="title">
+            ios and windows soon :)
+        </h1>
+    </div>
+    <div id="NAVNAVGO"></div>
+    <script src="../js/stylers.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>
