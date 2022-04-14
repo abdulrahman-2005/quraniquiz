@@ -1,5 +1,6 @@
 class normalSession {
 	constructor(sessionData) {
+		logs.push("load.type")
 		loadNormalSession();
 		this.data = {
 			right: 0,
@@ -78,6 +79,7 @@ ${percent > 50 ? alldata[language].content.welldone : alldata[language].content.
 
 class diverseSession {
 	constructor(sessionData) {
+		logs.push("load.type")
 		loadDivSession();
 		this.data = {
 			right: 0,
