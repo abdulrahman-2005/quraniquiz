@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: kufi;
-    src: url("./kufi.ttf");
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap");
 }
 
 * {
