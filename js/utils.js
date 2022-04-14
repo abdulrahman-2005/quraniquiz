@@ -74,7 +74,7 @@ function changeLanguage() {
 	if (language === "Ar") {
 		fontStyler.innerHTML = `
 		* {
-			font-family: kufi !important;
+			font-family: 'Noto Kufi Arabic' !important;
 		}`
 	} else {
 		fontStyler.innerHTML = `

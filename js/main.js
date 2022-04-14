@@ -172,5 +172,5 @@ function chooseLevel(lvl) {
 }
 
 function creator() {
-	alertCustom("<p style='font-family: kufi;'>تم انشاء هذا الموقع من قبل: عبدالرحمن عزمي</p><br>copy right Abdulrahman Azmy Ⓒ  2022");
+	alertCustom("<p style='font-family: 'Noto Kufi Arabic', sans-serif;'>تم انشاء هذا الموقع من قبل: عبدالرحمن عزمي</p><br>copy right Abdulrahman Azmy Ⓒ  2022");
 }

@@ -8,18 +8,14 @@
     --wrong: rgb(255, 0, 0);
 }
 
-
-@font-face {
-    font-family: kufi;
-    src: url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap");
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap');
 
 * {
     direction: rtl;
     padding: 0;
     margin: 0;
     border-radius: 1rem;
-    font-family: kufi;
+    font-family: 'Noto Kufi Arabic', sans-serif;
     color: var(--font-color) !important;
     transition: .3s !important;
 }
