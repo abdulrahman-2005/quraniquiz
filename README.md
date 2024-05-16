@@ -1,12 +1,15 @@
-# quraniquiz
+# QuraniQuiz Project
 
-##This is QuraniQuiz Project, it is meant to be a way to help my brothers in memorizing quran, but i think iit would be helpful for everybody
+Welcome to the QuraniQuiz Project! This project is designed to assist in memorizing the Quran. While it was initially created to help my brothers, it can be beneficial for anyone interested in enhancing their Quranic knowledge.
 
-> you can here test your memorization about quran itself, or the ayat number surah names and so on
->> comleting the hardest one is very tough though because it includes the longest quran surahs, though with hard work every one can get there
+## Features
 
-!you would notice that i'm using python in some parts, but that was just for collecting data and optimizing it
+- **Memorization Testing**: Test your memorization of the Quran, including the specific verses (ayat), surah names, and more.
+- **Difficulty Levels**: Challenge yourself with various difficulty levels. The hardest level includes the longest surahs, but with dedication, anyone can master it.
 
-//this project is free and open source for body to use
+## Technical Details
 
-***abdulrahman azmy***
+- **Python Utilization**: Python is used in some parts of this project for data collection and optimization.
+- **Open Source**: This project is free and open source, available for anyone to use and contribute to.
+
+Created by Abdulrahman Azmy.
